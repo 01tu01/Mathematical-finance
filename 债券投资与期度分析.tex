@@ -1,0 +1,138 @@
+\section{债券投资与期度分析}
+\begin{enumerate}
+    \item 假设市场利率为10\%，一个剩余期限还有18个月、息率为7\%的债券(每年付息两次，刚付完半年的利息)，求该债券价格。18个月期的零息债券的到期收益率为多少?\\
+    \sol\\
+    由题知：$i = 10\%, M = 1.5 \text{年}, C=7\%$，则
+    \[p = 100\times \frac{7\%}{10\%} \times \left[1 - \left(1 + \frac{10\%}{2}\right)^{-3}\right]+100\times \left(1+\frac{10\%}{2}\right)^{-3}=95.92,\]
+    故该债券价格为95.92元。\\
+    并且$N = 3\text{期}$，则
+    \[95.92 = 100 \times \frac{7\%}{r/2} \left[1 - \left(1 + \frac{r}{2}\right)^{-3}\right] + 100 \times \left(1 + \frac{r}{2}\right)^{-3} \Rightarrow r = 17.20\%,\]
+    则该债券的到期收益率为17.20\%。
+    \item 一个2年期债券的息率为8\%，每年付息两次，债券的当前现金价格为103元，那么债券的收益率是多少?\\
+    \sol\\
+    由题知：$N = 4 \text{期}, C=8\%$，则
+    \[103 = 100 \times \frac{8\%}{r/2} \left[1 - \left(1 + \frac{r}{2}\right)^{-4}\right] + 100 \left(1 + \frac{r}{2}\right)^{-4} \Rightarrow r = 14.22\%,\]
+    则收益率是7.11\%。
+    \item 假设一个投资者在2013年1月1日购买了一个5年期息率为8\%的债券，当时市场利率为6\%。该债券的面值为100000元，到期日为2015年12月31日。计算投资者购买之前的价格，假设债券1年付息一次。\\
+    \sol\\
+    由题意：$i = 6\%, 2M = 2\text{年}, C=8\%, V= 100000$，则
+    \[P = \frac{8\% \times 100000}{6\%} \times \left[1 - \left(1 + 6\%\right)^{-2}\right]+100000\times \left(1+6\%\right)^{-2}=340999.17,\]
+    故投资者购买之前的价格为340999.17元。
+    \item 假设一个债券的收益率为10\%，计算一年期面值为1000元的零息债券的价格；2年期面值为1000元的零息债券的价格；3年期面值为10000元的零息债券的价格。\\
+    \sol\\
+    若该债券1年付息一次，则
+    \begin{align*}
+        & p_1 = 1000(1 + 10\%)^{-1} = 909.09,\\
+        & p_2 = 1000(1 + 10\%)^{-2} = 826.45,\\
+        & p_3 = 10000(1 + 10\%)^{-3} = 7513.15.
+    \end{align*}
+    故零息债券的价格分别为909.09元、826.45元、7513.15元。\\
+    若该债券半年付息一次，则
+    \begin{align*}
+        & p_1 = 1000(1 + 10\%/2)^{-2} = 907.03,\\
+        & p_2 = 1000(1 + 10\%/2)^{-4} = 822.70,\\
+        & p_3 = 10000(1 + 10\%/2)^{-6} = 7462.15.
+    \end{align*}
+    故零息债券的价格分别为907.03元、822.70元、7462.15元。
+    \item 一个年收益率为10\%的3年期债券，其息率为10\%(每年支付一次)，面值为10000元，计算该债券的价格。\\
+    \sol
+    \[p = 10000 \times \frac{10\%}{10\%} [1 - (1 + 10\%)^{-3}] + 10000(1 + 10\%)^{-3} = 10000,\]
+    故该债券的价格为10000元。
+    \item 一个年收益率为12\%的4年期债券，其息率为8\%(每年支付一次)，面值为10000元，计算该债券的期度。\\
+    \sol\\
+    先计算$P(i)$，则
+    \begin{align*}
+        P(i) & = \frac{800}{2i} \left[1-\left(1 + i\right)^{-4}\right] + 10000(1 + i)^{-4}\\
+        & = \frac{400}{i}\left[1-\left(1 + i\right)^{-4}\right] + 10000(1 + i)^{-4},\\
+        \frac{\mathrm{d}\, P(i)}{\mathrm{d} \, i} & = \frac{1600}{i(1+i)^5} - \frac{40000}{(1 + i)^5} + \frac{400\left(\frac{1}{(1 + i)^4} - 1\right)}{i^2}.
+    \end{align*}
+    期度为
+    \begin{align*}
+        D(8\%) & = \left.-\frac{\mathrm{d}\, P(i)}{\mathrm{d} \, i}\right| _{i = 8\%} \cdot \frac{1 + 8\%}{P(8\%)} \\
+        & = 3.76
+    \end{align*}
+    故该债券的期度为3.76年。
+    \item 假设你接下来两年需要在年末支付每年11700元的学费。目前市场利率为7\%。计算这笔款项的现值和其期度。\\
+    \sol\\
+    显然这笔款项是零息的，则
+    \[p = 11700(1 + 7\%)^{-2} = 10219.23,\]
+    故这笔款项的现值为10219.23元。计算$P(i)$，则
+    \begin{align*}
+        P(i) & = 11700(1 + i)^{-2} = \frac{11700}{(1 + i)^2},\\
+        \frac{\mathrm{d}\, P(i)}{\mathrm{d} \, i} & = -\frac{23400}{(1 + i)^3}.
+    \end{align*}
+    期度为
+    \begin{align*}
+        D(7\%) & = \left.-\frac{\mathrm{d}\, P(i)}{\mathrm{d} \, i}\right| _{i = 7\%} \cdot \frac{1 + 7\%}{P(7\%)} \\
+        & = 2
+    \end{align*}
+    这笔款项的期度为2年。
+    \item 计算以下四种债券的价格和期度。哪个债券对于市场利率的变动最为敏感?
+    \begin{center}
+        \setlength{\tabcolsep}{6mm}{
+        \begin{tabular}{c|c|c|c|c}
+            \hline
+            证券 & 息率(半年付息一次)/\% & 面值/元 & 期限/年 & 市场利率(年利率)/\% \\ \hline
+            A & 10 & 1000 & 1.5 & 15 \\ \hline
+            B & 5 & 1000 & 1.5 & 15 \\ \hline
+            C & 0 & 1000 & 1.5 & 15 \\ \hline
+            D & 0 & 1000 & 1 & 15 \\ \hline
+        \end{tabular}}
+    \end{center}
+    \sol\\
+    证券A：
+    \begin{align*}
+        P_A(i) & = \frac{100}{i} \left[1 - \left(1 + \frac{i}{2}\right)^{-3}\right] + 1000\left(1 + \frac{i}{2}\right)^{-3},\\
+        P_A(15\%) & = 934.99,\\
+        \frac{\mathrm{d}\, P_A(i)}{\mathrm{d} \, i} & = \frac{100 \left(\frac{1}{{\left(\frac{i}{2} + 1\right)}^3} - 1\right)}{i^2} - \frac{1500}{{\left(\frac{i}{2} + 1\right)}^4} + \frac{150}{i {\left(\frac{i}{2} + 1\right)}^4},\\
+        D_A(i) & = \frac{\left(\frac{i}{2} + 1\right) \left(\frac{100 \left(\frac{1}{{\left(\frac{i}{2} + 1\right)}^3} - 1\right)}{i^2} - \frac{1500}{{\left(\frac{i}{2} + 1\right)}^4} + \frac{150}{i {\left(\frac{i}{2} + 1\right)}^4}\right)}{\frac{100 \left(\frac{1}{{\left(\frac{i}{2} + 1\right)}^3} - 1\right)}{i} - \frac{1000}{{\left(\frac{i}{2} + 1\right)}^3}},\\
+        D_A(15\%) & = 1.42712.
+    \end{align*}
+    故证券A的价格为934.99元，期度为1.42712年。\\
+    证券B：
+    \begin{align*}
+        P_B(i) & = \frac{50}{i} \left[1 - \left(1 + \frac{i}{2}\right)^{-3}\right] + 1000\left(1 + \frac{i}{2}\right)^{-3},\\
+        P_B(15\%) & = 869.97,\\
+        \frac{\mathrm{d}\, P_B(i)}{\mathrm{d} \, i} & = \frac{100 \left(\frac{1}{{\left(\frac{i}{2} + 1\right)}^3} - 1\right)}{i^2} - \frac{1500}{{\left(\frac{i}{2} + 1\right)}^4} + \frac{150}{i {\left(\frac{i}{2} + 1\right)}^4},\\
+        D_B(i) & = \frac{\left(\frac{i}{2} + 1\right) \left(\frac{50 \left(\frac{1}{{\left(\frac{i}{2} + 1\right)}^3} - 1\right)}{i^2} - \frac{1500}{{\left(\frac{i}{2} + 1\right)}^4} + \frac{75}{i {\left(\frac{i}{2} + 1\right)}^4}\right)}{\frac{50 \left(\frac{1}{{\left(\frac{i}{2} + 1\right)}^3} - 1\right)}{i} - \frac{1000}{{\left(\frac{i}{2} + 1\right)}^3}},\\
+        D_B(15\%) & = 1.46084.
+    \end{align*}
+    故证券B的价格为869.97元，期度为1.46084年。\\
+    证券C：
+    \begin{align*}
+        P_C(i) & = 1000\left(1 + \frac{i}{2}\right)^{-3},\\
+        P_C(15\%) & = 804.96,\\
+        \frac{\mathrm{d}\, P_C(i)}{\mathrm{d} \, i} & = \frac{100 \left(\frac{1}{{\left(\frac{i}{2} + 1\right)}^3} - 1\right)}{i^2} - \frac{1500}{{\left(\frac{i}{2} + 1\right)}^4} + \frac{150}{i {\left(\frac{i}{2} + 1\right)}^4},\\
+        D_C(i) & = 1.5,\\
+        D_C(15\%) & = 1.5.
+    \end{align*}
+    故证券C的价格为804.96元，期度为1.5年。\\
+    证券D：
+    \begin{align*}
+        P_D(i) & = 1000\left(1 + \frac{i}{2}\right)^{-2},\\
+        P_D(15\%) & = 865.33,\\
+        \frac{\mathrm{d}\, P_D(i)}{\mathrm{d} \, i} & = \frac{100 \left(\frac{1}{{\left(\frac{i}{2} + 1\right)}^3} - 1\right)}{i^2} - \frac{1500}{{\left(\frac{i}{2} + 1\right)}^4} + \frac{150}{i {\left(\frac{i}{2} + 1\right)}^4},\\
+        D_D(i) & = 1,\\
+        D_D(15\%) & = 1.
+    \end{align*}
+    故证券D的价格为865.33元，期度为1年。\\
+    考虑变动时，我们不妨将市场利率改变为15.1\%，则
+    \begin{align*}
+        D_A(15.1\%) & = 1.42706,\\D_B(15.1\%) & = 1.46081,\\D_C(15.1\%) & = 1.5, \\ D_D(15.1\%) & = 1.
+    \end{align*}
+    显然，证券A的变动幅度最大，债券A对于市场利率的变动最为敏感。
+    \item 考虑两个债券组合。资产组合A由一个本金为2000元的1年期零息债券和1个面值为6000元的10年期零息债券组成。资产组合B由一个面值为5000元的5.95年期的零息债券组成。每个债券的收益率为10\%。证明这两个资产组合具有相同的期度。\\
+    \pro\\
+    先计算资产组合A的期度：
+    \begin{align*}
+        P_{A1}(i) & = 2000(1 + i)^{-1},\\
+        P_{A2}(i) & = 2000(1 + i)^{-10},\\
+        D_{A1}(10\%) & = \left.-\frac{\mathrm{d}\, P_{A1}(i)}{\mathrm{d} \, i}\right| _{i = 10\%} \cdot \frac{1 + 10\%}{P_{A1}(10\%)} = 1,\\
+        D_{A2}(10\%) & = \left.-\frac{\mathrm{d}\, P_{A2}(i)}{\mathrm{d} \, i}\right| _{i = 10\%} \cdot \frac{1 + 10\%}{P_{A2}(10\%)} = 10,\\
+        D_A(10\%) & = \frac{1 \times P_{A1}(10\%) + 10 \times P_{A2}(10\%)}{P_{A1}(10\%) + P_{A2}(10\%)} = 6.
+    \end{align*}
+    资产组合B的期度：
+    \[D_B(10\%) =  \left.-\frac{\mathrm{d}\, P_{B}(i)}{\mathrm{d} \, i}\right| _{i = 10\%} \cdot \frac{1 + 10\%}{P_B(10\%)} = 6.\]
+    故这两个资产组合具有相同的期度。
+\end{enumerate}
+\clearpage
